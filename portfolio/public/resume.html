@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siva Suriya.B - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm 18mm 15mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif, 'Segoe UI', Roboto, sans-serif;
+      color: #111827;
+      background-color: #ffffff;
+      line-height: 1.4;
+      font-size: 10.5pt;
+    }
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    .header h2 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #222222;
+      margin-bottom: 6px;
+    }
+    .header .contact-line {
+      font-size: 9.5pt;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: #333333;
+    }
+    .header .contact-line span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .section {
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #111111;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+      color: #000000;
+    }
+    .summary-text {
+      font-size: 9.8pt;
+      text-align: justify;
+      line-height: 1.4;
+    }
+    .skills-list {
+      font-size: 9.8pt;
+      line-height: 1.45;
+    }
+    .skills-list p {
+      margin-bottom: 4px;
+    }
+    .skills-list strong {
+      font-weight: 700;
+      color: #000000;
+    }
+    .item {
+      margin-bottom: 12px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    .item-title {
+      font-size: 10.2pt;
+      font-weight: 700;
+      color: #000000;
+    }
+    .item-title a {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .item-title .tech-tag {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 9.2pt;
+      color: #333333;
+      margin-left: 6px;
+    }
+    .item-date {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #333333;
+    }
+    .item-sub {
+      font-size: 9.8pt;
+      font-style: italic;
+      color: #333333;
+      margin-bottom: 3px;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      margin-left: 18px;
+      font-size: 9.5pt;
+      line-height: 1.4;
+    }
+    ul.bullet-list li {
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Siva Suriya.B</h1>
+    <h2>Full Stack Developer</h2>
+    <div class="contact-line">
+      <span>✉️ <a href="mailto:sivasurya.21@gmail.com">sivasurya.21@gmail.com</a></span>
+      <span>•</span>
+      <span>🔗 <a href="https://www.linkedin.com/in/siva-suriya-b-990438381" target="_blank">linkedin.com/in/siva-suriya-b-990438381</a></span>
+      <span>•</span>
+      <span>💻 <a href="https://github.com/sivasurya2006?tab=repositories" target="_blank">github.com/sivasurya2006</a></span>
+      <span>•</span>
+      <span>📍 Thanjavur, Tamil Nadu</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary-text">
+      Passionate and dedicated Full Stack Developer with strong hands-on experience building clean, responsive single-page web applications using React.js, JavaScript (ES6+), HTML5, CSS3, and Fetch API. Proven ability to create modular component architecture, manage state effectively with React Hooks, and integrate third-party REST APIs. Currently expanding skill set into backend development using Python and Django. Eager to contribute to real-world software engineering projects.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-list">
+      <p><strong>Programming Languages:</strong> JavaScript (ES6+), Python, HTML5, CSS3, C Basics, C++ Basics</p>
+      <p><strong>Frontend Technologies:</strong> React.js, HTML5, CSS3, Responsive Web Design, Single Page Applications (SPA), Component-Based Architecture, React Hooks (useState, useEffect, useMemo), Fetch API</p>
+      <p><strong>Development Tools:</strong> VS Code (Visual Studio Code), Git, GitHub, Vite</p>
+      <p><strong>Currently Learning & Backend:</strong> Python Backend, Django (Basics), Database Management (SQL Basics)</p>
+      <p><strong>Concepts:</strong> Object-Oriented Programming (OOP), Component Architecture, SDLC Basics, Clean Code Principles, Debugging, Responsive UI Design</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">
+          NewsHub - Real-Time News Application [<a href="https://github.com/sivasurya2006?tab=repositories" target="_blank">GitHub Link</a>]
+          <span class="tech-tag">:: React.js • JavaScript (ES6+) • Fetch API • CSS3</span>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Architected and developed a dynamic single-page news aggregator that fetches and renders real-time worldwide news using external APIs.</li>
+        <li>Implemented dynamic category navigation, search query handling, and asynchronous data fetching with Fetch API.</li>
+        <li>Managed loading and error states using React Hooks (<code>useState</code>, <code>useEffect</code>), creating a seamless user experience.</li>
+        <li>Built fully responsive UI components adaptable across mobile, tablet, and desktop screens.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">
+          Movie Search & Discovery Application [<a href="https://github.com/sivasurya2006?tab=repositories" target="_blank">GitHub Link</a>]
+          <span class="tech-tag">:: React.js • JavaScript (ES6+) • Fetch API • CSS3</span>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Developed an interactive media search application querying external movie APIs to display movie posters, ratings, and plot summaries.</li>
+        <li>Handled asynchronous JavaScript Fetch API requests for immediate search feedback and detailed view transitions.</li>
+        <li>Managed component state with React Hooks and designed a clean modern interface with smooth card layouts.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Education</div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Bachelor of Technology (B.Tech) - Computer Science and Engineering</div>
+        <div class="item-date">2023 – 2027</div>
+      </div>
+      <div class="item-sub">PRIST University College, Thanjavur, Tamil Nadu</div>
+      <ul class="bullet-list">
+        <li>Focusing on Web Technologies, Software Engineering, Object-Oriented Programming, and Data Structures.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Higher Secondary Certificate (HSC) & SSLC</div>
+        <div class="item-date">Completed</div>
+      </div>
+      <div class="item-sub">State Board of Tamil Nadu</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Certifications & Interests</div>
+    <ul class="bullet-list">
+      <li><strong>Front-End Web Development:</strong> Strong practical foundation in React.js, Modern JavaScript, Fetch API, and Responsive Design.</li>
+      <li><strong>Programming Fundamentals:</strong> Core problem solving in Python, C, and C++ basics.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

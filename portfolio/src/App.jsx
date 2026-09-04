@@ -1,38 +1,66 @@
 import { useMemo, useState } from 'react'
 import { projects } from './data/projects'
+import profilePhoto from './assets/surya.jpg'
 import './App.css'
 
 const navItems = ['Home', 'About', 'Skills', 'Projects', 'Education', 'Contact']
 
-const frontendSkills = ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Responsive UI']
-const toolsSkills = ['Git', 'GitHub', 'Vite', 'REST API Integration']
-const programmingSkills = ['Python', 'C Basics', 'C++ Basics']
-const learningSkills = ['Django', 'Database Management']
+const frontendSkills = [
+  'HTML5',
+  'CSS3',
+  'JavaScript (ES6+)',
+  'React.js',
+  'Responsive UI',
+  'Component-Based Architecture',
+  'React Hooks (useState, useEffect, useMemo)',
+  'Fetch API',
+]
+
+const toolsSkills = [
+  'VS Code (Visual Studio Code)',
+  'Git',
+  'GitHub',
+  'Vite',
+]
+
+const programmingSkills = [
+  'JavaScript (ES6+)',
+  'Python',
+  'HTML5 & CSS3',
+  'C Basics',
+  'C++ Basics',
+]
+
+const learningSkills = [
+  'Django (Basics)',
+  'Backend Fundamentals',
+  'Database Management (SQL)',
+]
 
 const educationTimeline = [
   {
     period: 'Fourth Year (2026 - 2027)',
-    title: 'Back-End Engineering & Database Integration',
+    title: 'Full-Stack Expansion & Backend Basics',
     detail:
-      'Currently mastering back-end development using Python and Django, while studying database management to grow into a well-rounded full-stack developer.',
+      'Currently studying Python backend fundamentals, Django basics, and database concepts to advance towards full-stack development.',
   },
   {
     period: 'Third Year (2025 - 2026)',
-    title: 'Front-End Specialization & Real-World Projects',
+    title: 'Front-End Specialization & React Projects',
     detail:
-      'Focused heavily on practical web development, JavaScript, and React. Built API-driven projects including NewsHub and Movie Search App.',
+      'Focused on practical frontend engineering with React.js, JavaScript, and Fetch API. Built real-world projects including NewsHub and Movie Search App.',
   },
   {
     period: 'Second Year (2024 - 2025)',
-    title: 'Core Web Technologies & Object-Oriented Programming',
+    title: 'Core Web Technologies & OOP Principles',
     detail:
-      'Learned object-oriented programming principles and built a strong foundation in front-end design using HTML and CSS.',
+      'Learned Object-Oriented Programming (OOP) concepts, algorithms, and built responsive web layouts using HTML5, CSS3, and JavaScript.',
   },
   {
     period: 'First Year (2023 - 2024)',
-    title: 'Programming Fundamentals',
+    title: 'Programming Logic & Computer Science Fundamentals',
     detail:
-      'Started the computer science journey by learning programming logic, algorithmic thinking, and core syntax in Python.',
+      'Started computer science engineering with core logic, problem solving, and basic programming in Python and C.',
   },
 ]
 
@@ -40,7 +68,8 @@ const socialLinks = {
   github: 'https://github.com/sivasurya2006?tab=repositories',
   linkedin:
     'https://www.linkedin.com/in/siva-suriya-b-990438381?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-  email: 'mailto:sivasurya.b@21@gmail.com',
+  email: 'mailto:sivasurya.21@gmail.com',
+  rawEmail: 'sivasurya.21@gmail.com',
 }
 
 function App() {
@@ -82,7 +111,7 @@ function App() {
     }
 
     setForm({ name: '', email: '', message: '' })
-    setFormStatus('Thanks! Your message is ready. Backend integration can be added later.')
+    setFormStatus('Thank you! Your message has been received.')
   }
 
   return (
@@ -111,7 +140,7 @@ function App() {
               {item}
             </a>
           ))}
-          <a className="nav-resume" href="/Siva-Suriya-B-Resume.pdf" download onClick={closeMenu}>
+          <a className="nav-resume" href="/Siva-Suriya-B-Resume.pdf" target="_blank" rel="noreferrer" onClick={closeMenu}>
             Resume
           </a>
         </nav>
@@ -120,21 +149,20 @@ function App() {
       <main>
         <section className="hero-section section" id="home">
           <div className="hero-copy">
-            <p className="eyebrow">Aspiring Full Stack Developer</p>
+            <p className="eyebrow">Front-End & Aspiring Full Stack Developer</p>
             <h1>Siva Suriya.B</h1>
             <h2>Full Stack Developer</h2>
             <p className="hero-intro">
-              Final-year Computer Science student at PRIST University College, Thanjavur,
-              focused on building clean, responsive, API-driven web applications with React,
-              JavaScript, HTML, and CSS while using Python fundamentals and actively learning
-              Django with database management.
+              Final-year Computer Science student at PRIST University College, Thanjavur.
+              Passionate about building responsive, modern user interfaces with React.js,
+              JavaScript, HTML5, CSS3, and Fetch API, while actively expanding into backend development with Python and Django.
             </p>
 
             <div className="hero-actions">
               <a className="btn primary" href="#projects">
                 View Projects
               </a>
-              <a className="btn secondary" href="/Siva-Suriya-B-Resume.pdf" download>
+              <a className="btn secondary" href="/Siva-Suriya-B-Resume.pdf" download="Siva-Suriya-B-Resume.pdf">
                 Download Resume
               </a>
               <a className="btn ghost" href={socialLinks.github} target="_blank" rel="noreferrer">
@@ -146,43 +174,47 @@ function App() {
             </div>
           </div>
 
-          <div className="profile-panel" aria-label="Profile image placeholder">
+          <div className="profile-panel" aria-label="Siva Suriya Profile Photo">
             <div className="profile-frame">
-              <div className="profile-placeholder">
-                <span>SS</span>
-              </div>
+              <img
+                src={profilePhoto}
+                alt="Siva Suriya B - Full Stack Developer"
+                className="profile-img"
+              />
             </div>
-            <p>Profile photo can be added here later.</p>
+            <div className="profile-caption">
+              <h3>Siva Suriya.B</h3>
+              <p>Full Stack Developer</p>
+            </div>
           </div>
         </section>
 
         <section className="section about-section" id="about">
           <div className="section-heading">
             <p className="eyebrow">About</p>
-            <h2>Clean interfaces, practical learning, and steady full-stack growth.</h2>
+            <h2>Clean interfaces, responsive design, and practical software development.</h2>
           </div>
           <div className="about-grid">
             <article>
               <h3>Professional Introduction</h3>
               <p>
-                I am Siva Surya, a final-year B.Tech Computer Science student and aspiring
-                Full-Stack Developer. I specialize in front-end development using HTML, CSS,
-                JavaScript, and React to build responsive web applications.
+                I am Siva Suriya, a final-year B.Tech Computer Science student and aspiring
+                Developer. I specialize in front-end development using HTML5, CSS3,
+                JavaScript (ES6+), and React.js to build modern web applications.
               </p>
             </article>
             <article>
               <h3>Development Interests</h3>
               <p>
-                My interests include front-end engineering, API integration, responsive design,
-                Python fundamentals, Django, and database-backed web applications.
+                My focus includes responsive web design, React component architecture,
+                API integration using Fetch API, Python programming, and backend fundamentals.
               </p>
             </article>
             <article>
               <h3>Career Objective</h3>
               <p>
-                To secure an entry-level Front-End or Full-Stack Developer role where I can
-                contribute to real-world software projects and continue expanding my backend
-                engineering skills.
+                To secure a Front-End or Full-Stack Developer position where I can apply
+                my technical skills, build practical web applications, and grow with the team.
               </p>
             </article>
           </div>
@@ -191,12 +223,12 @@ function App() {
         <section className="section skills-section" id="skills">
           <div className="section-heading">
             <p className="eyebrow">Skills</p>
-            <h2>Technologies I work with and skills I am actively improving.</h2>
+            <h2>Technologies and tools I use to build responsive web applications.</h2>
           </div>
           <div className="skills-layout">
-            <SkillGroup title="Frontend" skills={frontendSkills} />
-            <SkillGroup title="Tools" skills={toolsSkills} />
-            <SkillGroup title="Programming" skills={programmingSkills} />
+            <SkillGroup title="Frontend Technologies" skills={frontendSkills} />
+            <SkillGroup title="Development Tools" skills={toolsSkills} />
+            <SkillGroup title="Programming Languages" skills={programmingSkills} />
             <SkillGroup title="Currently Learning" skills={learningSkills} />
           </div>
         </section>
@@ -205,7 +237,7 @@ function App() {
           <div className="section-heading projects-heading">
             <div>
               <p className="eyebrow">Projects</p>
-              <h2>Hands-on work with React, APIs, and responsive UI development.</h2>
+              <h2>Hands-on projects built with React.js, JavaScript, and Fetch API.</h2>
             </div>
             <div className="project-filters" aria-label="Project filters">
               {filters.map((filter) => (
@@ -245,16 +277,12 @@ function App() {
                     <a href={project.liveUrl} target="_blank" rel="noreferrer">
                       Live Demo
                     </a>
-                  ) : (
-                    <span>Deploy link later</span>
-                  )}
+                  ) : null}
                   {project.repositoryUrl ? (
                     <a href={project.repositoryUrl} target="_blank" rel="noreferrer">
-                      Source Code
+                      Source Code (GitHub)
                     </a>
-                  ) : (
-                    <span>Project repo later</span>
-                  )}
+                  ) : null}
                 </div>
               </article>
             ))}
@@ -264,7 +292,7 @@ function App() {
         <section className="section education-section" id="education">
           <div className="section-heading">
             <p className="eyebrow">Education</p>
-            <h2>B.Tech Computer Science and Engineering</h2>
+            <h2>B.Tech in Computer Science and Engineering</h2>
             <p>
               PRIST University College, Thanjavur · 2023 - 2027 · Final Year
             </p>
@@ -283,13 +311,13 @@ function App() {
 
         <section className="section journey-section">
           <div className="section-heading">
-            <p className="eyebrow">Learning Journey</p>
-            <h2>Focused on becoming production-ready through consistent practice.</h2>
+            <p className="eyebrow">Continuous Learning</p>
+            <h2>Focused on practical coding and steady skill improvement.</h2>
           </div>
           <div className="journey-panel">
             <p>
-              I am currently improving backend development through Django and database
-              management while continuing to build front-end projects with React and REST APIs.
+              I build web projects with React.js and modern JavaScript to hone my frontend skills,
+              while expanding my knowledge into backend fundamentals with Python and databases.
             </p>
           </div>
         </section>
@@ -297,18 +325,17 @@ function App() {
         <section className="section resume-section">
           <div>
             <p className="eyebrow">Resume</p>
-            <h2>Resume is available from the public folder.</h2>
+            <h2>Professional Resume</h2>
             <p>
-              A temporary resume file is included now. Replace it with your final resume PDF
-              whenever it is ready.
+              View or download my updated resume featuring technical skills, projects, and education.
             </p>
           </div>
           <div className="resume-actions">
             <a className="btn primary" href="/Siva-Suriya-B-Resume.pdf" target="_blank" rel="noreferrer">
               View Resume
             </a>
-            <a className="btn secondary" href="/Siva-Suriya-B-Resume.pdf" download>
-              Download Resume
+            <a className="btn secondary" href="/Siva-Suriya-B-Resume.pdf" download="Siva-Suriya-B-Resume.pdf">
+              Download Resume (PDF)
             </a>
           </div>
         </section>
@@ -321,14 +348,22 @@ function App() {
 
           <div className="contact-grid">
             <div className="contact-details">
-              <a href={socialLinks.email}>sivasurya.b@21@gmail.com</a>
-              <a href={socialLinks.github} target="_blank" rel="noreferrer">
-                GitHub Profile
+              <a href={socialLinks.email} className="contact-item">
+                <span className="contact-icon">✉️</span>
+                <span>{socialLinks.rawEmail}</span>
               </a>
-              <a href={socialLinks.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn Profile
+              <a href={socialLinks.github} target="_blank" rel="noreferrer" className="contact-item">
+                <span className="contact-icon">💻</span>
+                <span>GitHub Profile (sivasurya2006)</span>
               </a>
-              <p>Thanjavur, Tamil Nadu</p>
+              <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" className="contact-item">
+                <span className="contact-icon">🔗</span>
+                <span>LinkedIn Profile (Siva Suriya.B)</span>
+              </a>
+              <div className="contact-item">
+                <span className="contact-icon">📍</span>
+                <span>Thanjavur, Tamil Nadu, India</span>
+              </div>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
@@ -372,13 +407,16 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© 2026 Siva Suriya.B. Built with React and Vite.</p>
+        <p>© 2026 Siva Suriya.B. All rights reserved.</p>
         <div>
           <a href={socialLinks.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
           <a href={socialLinks.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
+          </a>
+          <a href={socialLinks.email}>
+            Email
           </a>
         </div>
       </footer>
