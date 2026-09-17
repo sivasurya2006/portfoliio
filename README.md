@@ -27,5 +27,5 @@ Final-year B.Tech Computer Science student at PRIST University College, Thanjavu
 ###  Connect with Me
 
 *  **Email:** sivasurya.21@gmail.com
-*  **LinkedIn:** [linkedin.com/in/sivasuriyab](https://linkedin.com) *(Update link as needed)*
-*  **Portfolio:** [Your Portfolio Link Here]
+*  **LinkedIn:** [linkedin.com/in/sivasuriyab](https://linkedin.com)
+*  **Portfolio:** [https://portfoliio-ashy.vercel.app/]
